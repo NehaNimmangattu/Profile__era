@@ -13,11 +13,11 @@ const LeadSchema = new mongoose.Schema({
   },
   linkedin: {
     type: String,
-    match: [/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/[a-zA-Z0-9]+\.[^\s]{2,})$/, 'Please enter a valid URL']
+    match: [/^(^$|(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?)$/, 'Please enter a valid URL or leave it empty']
   },
   naukri: {
     type: String,
-    match: [/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/[a-zA-Z0-9]+\.[^\s]{2,})$/, 'Please enter a valid URL']
+    match: [/^(^$|(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?)$/, 'Please enter a valid URL or leave it empty']
   },
   date: { type: Date, default: Date.now }
 });
